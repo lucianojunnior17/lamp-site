@@ -18,12 +18,12 @@
                 <li><a href="">Contemporary</a></li>
                 <li><a href="">Affordable</a></li>
             </ul>
-            <button type="button"><span></span></button>
+            <button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
         </nav>
 
         <div class="lampcontainer">
             <img src="images/lamp.png" class="lamp" alt="lamp">
-            <img src="images/light.png" class="light" alt="light">
+            <img src="images/light.png" class="light" alt="light" id="light">
         </div>
 
         <div class="text">
@@ -38,6 +38,13 @@
         </div>        
         
     </div>
-    
+    <script>
+        var btn = document.getElementById("btn");
+        var light = document.getElementById("light");
+        function toggleBtn(){
+            btn.classList.toggle("active");
+            light.classList.toggle("on");
+        }
+    </script>
 </body>
 </html>
